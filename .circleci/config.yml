@@ -1,0 +1,12 @@
+version: 2 
+jobs:
+  build:
+    working_directory: ~/tmp 
+    docker:
+      - image: circleci/openjdk:8
+    steps:
+      - checkout 
+      - run: javac ./GH_Tools/src/main/java/com/guidedhacking/GH_Tools/*.java 
+      - run: javac ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools/AppTest.java
+      - run: cd ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools/AppTest.java; 
+      - run: java -ea AppTest;  
