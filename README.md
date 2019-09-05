@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/Erarnitox/GH_Tools/tree/master.svg?style=svg&circle-token=4b49f2a57e217dd682e641a6ee0b6df6c5bfabdf)](https://circleci.com/gh/Erarnitox/GH_Tools/tree/master)
 # GH_Tools
 #### Game Hacking Tools for Java
 `GH_Tools` is a wrapper around [**JNA**](https://github.com/java-native-access) makes it easier to use and provides some new functionality for game hacking as well.
