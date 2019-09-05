@@ -1,23 +1,16 @@
 # GH_Tools
 #### Game Hacking Tools for Java
-`GHTools` is a wrapper around [**JNA**](https://github.com/java-native-access) makes it easier to use and provides some new functionality for game hacking as well.
+`GH_Tools` is a wrapper around [**JNA**](https://github.com/java-native-access) makes it easier to use and provides some new functionality for game hacking as well.
 
 ### Installing
 
-- To use `GHTools` you can either download it from [**here**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) and import in in your project.
+- To use `GH_Tools` you can either download it from [**here**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) and import in in your project.
 
-- Or get the source for it [**here**](https://github.com/Erarnitox/java-sauerbraten-hack/tree/master/src/com/guidedhacking).
-
-If you want to use the source you need to download and import these in your project first:
-1. [**JNA**](http://repo1.maven.org/maven2/net/java/dev/jna/jna/5.1.0/jna-5.1.0.jar)
-2. [**JNA Platform**](http://repo1.maven.org/maven2/net/java/dev/jna/jna-platform/5.1.0/jna-platform-5.1.0.jar)
-
-For the JavaFX Overlay make sure to use `Java 1.8` or download the current version of JavaFX and import in in your project from [**here**](https://github.com/javafxports/openjdk-jfx/releases)
-
+- Or get the source (Eclipse project) for it [**here**](https://github.com/Erarnitox/GH_Tools/GH_Tools).
 
 ### Usage
 #### Package Overview
-All Classes can be found in the package `com.guidedhacking`. In this Overview we will have a brief look at its classes and their most often used methods.
+All Classes can be found in the package `com.guidedhacking.GH_Tools`. In this Overview we will have a brief look at its classes and their most often used methods.
 
 ##### GHArchitecture
 Is a pure Enum type with the following Options:
@@ -178,13 +171,13 @@ Returns the y-position of the upper left corner of the game window on the sreeen
 
 ### Getting started
 
-Once you have downloaded and imported [**GHTools**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) into your project you can get started coding your first hack for a game.
+Once you have downloaded and imported [**GH_Tools**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) into your project you can get started coding your first hack for a game.
 
 here is a very simple example on how to use `GHTools`
 
 ```
-//import everything from the GHTools:
-import com.guidedhacking.*; 
+//import everything from the GH_Tools:
+import com.guidedhacking.GH_Tools*; 
 
 public class Example {
 	
