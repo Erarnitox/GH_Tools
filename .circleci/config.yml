@@ -6,7 +6,7 @@ jobs:
       - image: circleci/openjdk:8
     steps:
       - checkout 
-      - run: javac -cp "".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" ./GH_Tools/src/main/java/com/guidedhacking/GH_Tools/*.java 
-      - run: javac -cp "".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools/AppTest.java
+      - run: javac -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" ./GH_Tools/src/main/java/com/guidedhacking/GH_Tools/*.java 
+      - run: javac -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools/AppTest.java
       - run: cd ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools/AppTest.java; 
-      - run: java -cp "".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" -ea AppTest;  
+      - run: java -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" -ea AppTest;  
