@@ -9,11 +9,32 @@ import com.sun.jna.platform.win32.WinDef.WORD;
 import com.sun.jna.platform.win32.WinUser.INPUT;
 
 public class GHInput {
+	   private static boolean pressed = false;
 	
 	   //checks if button is pressed
        public static boolean getKeyDown(int key) {
     	   return KeyboardUtils.isPressed(key);
        }
+       
+       //checks if button is pressed (only returns true once each press)
+       public static boolean getKeyPress(int key) {
+    	   boolean keydown = KeyboardUtils.isPressed(key);
+    	   if(pressed ^ keydown) {
+    			 if(keydown) {
+    				pressed = !pressed;
+    				return true;
+    			 }
+    			 pressed = !pressed;
+    		}
+    	   return false;
+       }
+       
+       /*
+       public int getKeyPressed(){
+    	   return 0;
+       }*/
+       
+       
        
        //sends key input
        public static void sendKeyPress(int key) {
