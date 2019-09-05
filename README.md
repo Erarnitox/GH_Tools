@@ -5,7 +5,7 @@
 
 ### Installing
 
-- To use `GH_Tools` you can either download it from [**here**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) and import in in your project.
+- To use `GH_Tools` you can either download it from [**here**](https://github.com/Erarnitox/GH_Tools/releases) and import in in your project.
 
 - Or get the source (Eclipse project) for it [**here**](https://github.com/Erarnitox/GH_Tools/GH_Tools).
 
@@ -134,7 +134,7 @@ Will `return` true if successful and `false` otherwise.
 Write a byte[] to memory starting at the provided address.
 Will `return` true if successful and `false` otherwise.
 
-this class also provides some methods for working with objects in memory. If you are interested in them check the source of this class [here](https://github.com/Erarnitox/java-sauerbraten-hack/blob/master/src/com/guidedhacking/GHMemory.java). Please note that these methods are not tested!
+this class also provides some methods for working with objects in memory. If you are interested in them check the source of this class [here](https://github.com/Erarnitox/GH_Tools/blob/master/GH_Tools/src/main/java/com/guidedhacking/GH_Tools/GHMemory.java). Please note that these methods are not tested!
 
 ##### GHPointer
 Used to hold information about the static pointer and the offsets of a value.
@@ -175,9 +175,9 @@ Returns the y-position of the upper left corner of the game window on the sreeen
 
 ### Getting started
 
-Once you have downloaded and imported [**GH_Tools**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) into your project you can get started coding your first hack for a game.
+Once you have downloaded and imported [**GH_Tools**](https://github.com/Erarnitox/GH_Tools/releases) into your project you can get started coding your first hack for a game.
 
-here is a very simple example on how to use `GHTools`
+here is a very simple example on how to use `GH_Tools`
 
 ```
 //import everything from the GH_Tools:
@@ -215,7 +215,7 @@ public class Example {
 }
 ```
 
-for a more in depth example please have a look at the example hack i have provided.
+for a more in depth example please have a look at the example hack i have made using an early version of GH_Tools [**here**](https://github.com/Erarnitox/java-game-hacking).
 
 ## Built With
 
