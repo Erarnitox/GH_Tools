@@ -8,6 +8,5 @@ jobs:
       - checkout 
       - run: javac -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" ./GH_Tools/src/main/java/com/guidedhacking/GH_Tools/*.java 
       - run: javac -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools/AppTest.java
-      - run: cd ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools; 
-      - run: ls -al;
-      - run: java -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" -ea AppTest;  
+      - run: cd ./GH_Tools/src/test/java/com/guidedhacking/GH_Tools; java -cp ".:./GH_Tools/jna-5.1.0.jar:./GH_Tools/jna-platform-5.1.0.jar" -ea AppTest;
+      - run: echo "END OF UNIT TEST";
