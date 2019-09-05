@@ -26,6 +26,9 @@ Unlike build in methods these will also work when the program is out of focus.
 - ###### boolean getKeyDown(int key)
 returns `true` if the key is pressed and `false` otherwise.
 
+- ###### boolean getKeyPress(int key)
+returns `true` once if the key got pressed and `false` otherwise.
+
 - ###### void sendKeyPress(int key)
 simulate a full key press and release.
 
