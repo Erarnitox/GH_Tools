@@ -1,62 +1,83 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.guidedhacking</groupId>
-  <artifactId>GH_Tools</artifactId>
-  <packaging>jar</packaging>
+    <groupId>com.guidedhacking</groupId>
+    <artifactId>GH_Tools</artifactId>
+    <packaging>jar</packaging>
 
-  <name>GH_Tools</name>
-  <url>https://github.com/Erarnitox/GH_Tools</url>
+    <name>GH_Tools</name>
+    <url>https://github.com/Erarnitox/GH_Tools</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
-  <dependency>
-    <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna</artifactId>
-      <version>5.5.0</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>net.java.dev.jna</groupId>
-      <artifactId>jna-platform</artifactId>
-      <version>5.5.0</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>lc.kra.system</groupId>
-      <artifactId>system-hook</artifactId>
-      <version>3.5</version>
-    </dependency>
-    <dependency>
-      <groupId>com.1stleg</groupId>
-      <artifactId>jnativehook</artifactId>
-      <version>2.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>me.yamakaja.runtimetransformer</groupId>
-      <artifactId>api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>me.yamakaja.runtimetransformer</groupId>
-      <artifactId>agent</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
-  <version>1.0.0</version>
-  <description>Game Hacking Tools for Java</description>
-  <organization>
-  	<name>Guided Hacking</name>
-  	<url>https://guidedhacking.com/</url>
-  </organization>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.5.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>5.5.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>lc.kra.system</groupId>
+            <artifactId>system-hook</artifactId>
+            <version>3.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.1stleg</groupId>
+            <artifactId>jnativehook</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.yamakaja.runtimetransformer</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>me.yamakaja.runtimetransformer</groupId>
+            <artifactId>agent</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <version>1.0.0</version>
+    <description>Game Hacking Tools for Java</description>
+    <organization>
+        <name>Guided Hacking</name>
+        <url>https://guidedhacking.com/</url>
+    </organization>
 </project>
