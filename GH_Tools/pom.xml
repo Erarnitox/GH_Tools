@@ -43,6 +43,10 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
+        <repository>
+            <id>codemc</id>
+            <url>https://repo.codemc.org/repository/maven-public/</url>
+        </repository>
     </repositories>
     
     <dependencies>
