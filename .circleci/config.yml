@@ -6,5 +6,5 @@ jobs:
       - image: circleci/openjdk:8
     steps:
       - checkout 
-      - run mvn -B package --file ../GH_Tools/pom.xml
+      - run: mvn -B package --file ../GH_Tools/pom.xml
       - run: echo "END OF UNIT TEST";
