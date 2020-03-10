@@ -5,7 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-
+import java.util.List;
 import com.sun.jna.Memory;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
@@ -26,7 +26,7 @@ public class GHMemory {
   private static GHArchitecture arch = GHArchitecture.Win32;
 
   public static boolean openProcess(String windowName, boolean returnAll){
-    return openProcess(getWindowHwnd(windowName, returnAll).get(0));
+    return openProcess(getWinHwnd(windowName, returnAll).get(0));
   }
   
   //call openProcess with only the window name
