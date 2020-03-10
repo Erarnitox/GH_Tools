@@ -216,6 +216,7 @@ public class Example {
 ```
 
 for a more in depth example please have a look at the example hack i have made using an early version of GH_Tools [**here**](https://github.com/Erarnitox/java-game-hacking).
+for a way to globally hook into the keyboard see the system-hook repo [**here**](https://github.com/kristian/system-hook)
 
 ## Built With
 
