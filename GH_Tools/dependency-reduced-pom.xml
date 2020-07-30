@@ -4,7 +4,7 @@
   <groupId>com.guidedhacking</groupId>
   <artifactId>GH_Tools</artifactId>
   <name>GH_Tools</name>
-  <version>1.2.0</version>
+  <version>1.4.0</version>
   <description>Game Hacking Tools for Java</description>
   <url>https://github.com/Erarnitox/GH_Tools</url>
   <organization>
@@ -28,6 +28,19 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>system-hook-mvn-repo</id>
+      <url>https://raw.github.com/kristian/system-hook/mvn-repo/</url>
+    </repository>
+    <repository>
+      <id>codemc</id>
+      <url>https://repo.codemc.org/repository/maven-public/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
