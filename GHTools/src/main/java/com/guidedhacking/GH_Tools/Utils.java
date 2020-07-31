@@ -22,8 +22,8 @@ import java.util.Arrays;
 
 public final class Utils {
 
-  static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32.dll", Kernel32.class, W32APIOptions.ASCII_OPTIONS);
-  static PsapiExt psapi = (PsapiExt) Native.loadLibrary("psapi", PsapiExt.class, W32APIOptions.UNICODE_OPTIONS);
+  static Kernel32 kernel32 = (Kernel32) Native.load("kernel32.dll", Kernel32.class, W32APIOptions.ASCII_OPTIONS);
+  static PsapiExt psapi = (PsapiExt) Native.load("psapi", PsapiExt.class, W32APIOptions.UNICODE_OPTIONS);
 
   private Utils() {
   }
@@ -128,7 +128,7 @@ public final class Utils {
   
   
   /**
-   * Lobs a library onto the program classpath
+   * Loads a library onto the program classpath
    *
    * @param jar the library to load
    */

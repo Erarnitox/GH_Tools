@@ -30,10 +30,6 @@ public class GHInput {
     return false;
   }
 
-  /*
-       public int getKeyPressed(){
-    	   return 0;
-       }*/
   //sends key input
   public static void sendKeyPress(int key) {
     INPUT input = new INPUT();
