@@ -12,18 +12,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLClassLoader;
 import java.net.URLConnection;
-import java.util.Arrays;
 
 public final class Utils {
 
-  static Kernel32 kernel32 = (Kernel32) Native.loadLibrary("kernel32.dll", Kernel32.class, W32APIOptions.ASCII_OPTIONS);
-  static PsapiExt psapi = (PsapiExt) Native.loadLibrary("psapi", PsapiExt.class, W32APIOptions.UNICODE_OPTIONS);
+  static Kernel32 kernel32 = (Kernel32) Native.load("kernel32.dll", Kernel32.class, W32APIOptions.ASCII_OPTIONS);
+  static PsapiExt psapi = (PsapiExt) Native.load("psapi", PsapiExt.class, W32APIOptions.UNICODE_OPTIONS);
 
   private Utils() {
   }
@@ -71,7 +66,7 @@ public final class Utils {
     }
 
     try {
-      URL url = GHPointer.class.getClassLoader().getResource(filename);
+      URL url = Utils.class.getClassLoader().getResource(filename);
 
       if (url == null) {
         return null;
@@ -124,32 +119,6 @@ public final class Utils {
     kernel32.CloseHandle(hProcess);
 
     return true;
-  }
-  
-  
-  /**
-   * Lobs a library onto the program classpath
-   *
-   * @param jar the library to load
-   */
-  public static synchronized void loadLibrary(File jar) {
-    try {
-      /*We are using reflection here to circumvent encapsulation; addURL is not public*/
-      URLClassLoader loader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-      URL url = jar.toURI().toURL();
-      /*Disallow if already loaded*/
-      for (URL it : Arrays.asList(loader.getURLs())) {
-        if (it.equals(url)) {
-          return;
-        }
-      }
-      Method method = URLClassLoader.class.getDeclaredMethod("addURL", new Class[]{URL.class});
-      method.setAccessible(true);
-      /*promote the method to public access*/
-      method.invoke(loader, new Object[]{url});
-    } catch (NoSuchMethodException | IllegalAccessException | MalformedURLException | InvocationTargetException e) {
-      e.printStackTrace();
-    }
   }
 
 }
