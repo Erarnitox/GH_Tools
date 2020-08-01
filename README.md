@@ -1,6 +1,5 @@
 # GH_Tools
 #### Game Hacking Tools for Java
-`GH_Tools` is a wrapper around [**JNA**](https://github.com/java-native-access) makes it easier to use and provides some new functionality for game hacking as well.
 
 ### Installing
 
@@ -45,8 +44,27 @@ Used to access the memory of another process.
 
 **Methods:**
 
-- ###### boolean openProcess(String windowName)
-Open a handle to the process with this window name to be able to access its memory. Returns `true` if it was successful and `false` otherwise.
+- ###### boolean openProcess(String processName)
+Open a handle to the process with this name to be able to access its memory. Returns `true` if it was successful and `false` otherwise.
+
+- ###### boolean openWindowName(String windowName)
+Same as `openProcess` but takes the title of a window instead of the processName
+
+- ###### long getModuleBaseAddress()
+Return the base address of the main executable of the currently opened process.
+
+- ###### long getModuleBaseAddress(String moduleName)
+Returns the base address of the module with the given name in the currently opened process.
+
+- ###### boolean writeMemory(long address, byte[] write)
+Write a byte array to the currently opened process at the given location.
+
+- ###### boolean patchMemory(long address, byte[] write)
+Same as write Memory but takes care of memory permissions as well.
+
+- ###### boolean nopMemory(long address, int size)
+Replaces code of the currently opened process with code that does nothing at the given address.
+Size is the nuber of nops to be written there.
 
 - ###### void setArchitecture(GHArchitecture architecture)
 Used to set the architecture to the architecture of the game to use the correct pointer size.
@@ -90,39 +108,39 @@ Returns the String that can be found at the provided address in the memory.
 - ###### byte[] readByteArray(long address, int bytesToRead)
 Returns the byte[] that starts at the provided address with the provided length.
 
-- ###### boolean writeBit(boolean data, long address, int position)
+- ###### boolean writeBit(long address, boolean data, int position)
 Write a single bit to memory (`true` for 1 and `false` for 0) to the specified position in the byte that can be found at the specified address.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeByte(byte data, long address)
+- ###### boolean writeByte(long address, byte data)
 Write a single byte to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeShort(short data, long address)
+- ###### boolean writeShort(long address, short data)
 Write a short to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeChar(char data, long address)
+- ###### boolean writeChar(long address, char data)
 Write a single char to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeInt(int data, long address)
+- ###### boolean writeInt(long address, int data)
 Write an int to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeLong(long data, long address)
+- ###### boolean writeLong(long address, long data)
 Write a long to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeFloat(float data, long address)
+- ###### boolean writeFloat(long address, float data)
 Write a float to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeDouble(double data, long address)
+- ###### boolean writeDouble(long address, double data)
 Write a double to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
-- ###### boolean writeString(long address,String string)
+- ###### boolean writeString(long address, String string)
 Write a String to the specified address in memory.
 Will `return` true if successful and `false` otherwise.
 
