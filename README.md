@@ -230,10 +230,7 @@ public class Example {
 ```
 
 for a more in depth example please have a look at the example hack i have provided.
-
-## Built With
-
-* [JNA](https://github.com/java-native-access) - Java Native Access
+(This hack is outdated by now but might still be useful)
 
 ## Acknowledgments
 
