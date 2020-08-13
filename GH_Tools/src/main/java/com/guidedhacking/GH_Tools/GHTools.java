@@ -1,6 +1,9 @@
 package com.guidedhacking.GH_Tools;
 
-public class GHTools {	
+public class GHTools {
+	static{
+		System.loadLibrary("GHTools"); //load our native code
+	}
 	//normal sleep with error handeling
 	public static boolean sleep(int time){
 		try {

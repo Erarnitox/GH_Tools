@@ -1,0 +1,7 @@
+﻿X:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(445,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  pch.cpp
+C:\Users\Erarnitox\git\GHTools_Local\GH_Tools\NativePart_GH_Tools\pch.cpp : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+  Generating code
+  Incremental LTCG not supported for -Od component, build without incremental LTCG.
+  Finished generating code
+  NativePart_GH_Tools.vcxproj -> C:\Users\Erarnitox\git\GHTools_Local\GH_Tools\NativePart_GH_Tools\\..\native\NativePart_GH_Tools.dll

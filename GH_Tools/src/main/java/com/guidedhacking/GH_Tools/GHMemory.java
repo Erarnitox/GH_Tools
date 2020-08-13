@@ -10,9 +10,17 @@ import java.nio.ByteOrder;
 public class GHMemory {
 	  private static GHArchitecture arch = GHArchitecture.Win32;
 	  
-	  public static native boolean openWindowName(String windowName); //open handle to process of a window
+	  //open handle to process of a window:
+	  public static boolean openWindowName(String windowName){
+		 return openWindowName(windowName, arch);
+	  }
+	  private static native boolean openWindowName(String procName, GHArchitecture arch);
 	  
-      public static native boolean openProcess(String window); //open handle to a process
+	  //open handle to a process:
+      public static boolean openProcess(String procName){
+    	  return openProcess(procName, arch);
+      }
+      private static native boolean openProcess(String procName, GHArchitecture arch);
       
       public static native boolean isConnected(); //is the game still running are we connected
       
@@ -20,7 +28,7 @@ public class GHMemory {
       public static native long getModuleBaseAddress(String moduleName);
       
       //set architecture to use correct pointers etc. 
-      public static void setArchitecture(GHArchitecture architecture) {
+      private static void setArchitecture(GHArchitecture architecture) {
     	     arch = architecture;
       }
       
