@@ -57,10 +57,10 @@ JNIEXPORT void JNICALL Java_ghTools_GH_sendKeyUp
 
 /*
  * Class:     ghTools_GH
- * Method:    SetCursor
+ * Method:    setCursorPos
  * Signature: (II)V
  */
-JNIEXPORT void JNICALL Java_ghTools_GH_SetCursor
+JNIEXPORT void JNICALL Java_ghTools_GH_setCursorPos
   (JNIEnv *, jclass, jint, jint);
 
 /*
@@ -69,6 +69,22 @@ JNIEXPORT void JNICALL Java_ghTools_GH_SetCursor
  * Signature: ()[I
  */
 JNIEXPORT jintArray JNICALL Java_ghTools_GH_getCursorPos
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     ghTools_GH
+ * Method:    setGameCursorPos
+ * Signature: (II)V
+ */
+JNIEXPORT void JNICALL Java_ghTools_GH_setGameCursorPos
+  (JNIEnv *, jclass, jint, jint);
+
+/*
+ * Class:     ghTools_GH
+ * Method:    getGameCursorPos
+ * Signature: ()[I
+ */
+JNIEXPORT jintArray JNICALL Java_ghTools_GH_getGameCursorPos
   (JNIEnv *, jclass);
 
 /*

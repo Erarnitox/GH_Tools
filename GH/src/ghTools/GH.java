@@ -45,10 +45,14 @@ public class GH {
       public static native void sendKeyUp(int key); //let key up input
       
       //set cursor position to point somewhere 
-      public static native void SetCursor(int x, int y);
+      public static native void setCursorPos(int x, int y);
   	
   	  public static native int[] getCursorPos(); //where does the cursor currently point to?
   	  
+  	//set cursor position to point somewhere 
+      public static native void setGameCursorPos(int x, int y);
+  	
+  	  public static native int[] getGameCursorPos(); //where does the cursor currently point to?
   	  
 	  //open handle to process of a window:
 	  private static native boolean openWindowName(String procName);
