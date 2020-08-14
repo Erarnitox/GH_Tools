@@ -166,9 +166,16 @@ JNIEXPORT jboolean JNICALL Java_ghTools_GH_nopMemory(JNIEnv*, jclass, jlong addr
     return (written == length) ? true : false;
 }
 
-JNIEXPORT jlong JNICALL Java_ghTools_GH_getObjectAddress(JNIEnv* env, jclass, jobject ghPointer) {
+JNIEXPORT jlong JNICALL Java_ghTools_GH_getObjectAddress(JNIEnv* env, jclass cls, jobject ghPointer) {
+    jfieldID fidLong{ env->GetFieldID(cls, "staticPointer", "J") };
+    jlong address{ env->GetLongField(ghPointer, fidLong) };
 
-    return FindDynamicAddress(gameHandle, address, offsets);
+    jfieldID fidInt{env->GetFieldID(cls, "offsets", "[I")};
+    jobject offsetsObject{ env->GetObjectField(ghPointer, fidInt) };
+    jintArray* offsets = reinterpret_cast<jintArray*>(&offsetsObject);
+    unsigned* start{ reinterpret_cast<unsigned*>(env->GetIntArrayElements(*offsets, NULL)) };
+    std::vector<unsigned> offsetsVector(start, start+env->GetArrayLength(*offsets));
+    return FindDynamicAddress(gameHandle, address, offsetsVector);
 }
 
 JNIEXPORT jint JNICALL Java_ghTools_GH_getGamePID(JNIEnv*, jclass) {
