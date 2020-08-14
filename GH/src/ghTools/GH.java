@@ -54,6 +54,10 @@ public class GH {
   	
   	  public static native int[] getGameCursorPos(); //where does the cursor currently point to?
   	  
+  	  public static native void leftClick();
+  	  
+  	  public static native void rightClick();
+  	  
 	  //open handle to process of a window:
 	  private static native boolean openWindowName(String procName);
 	  

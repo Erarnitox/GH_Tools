@@ -89,6 +89,22 @@ JNIEXPORT jintArray JNICALL Java_ghTools_GH_getGameCursorPos
 
 /*
  * Class:     ghTools_GH
+ * Method:    leftClick
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_ghTools_GH_leftClick
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     ghTools_GH
+ * Method:    rightClick
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_ghTools_GH_rightClick
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     ghTools_GH
  * Method:    openWindowName
  * Signature: (Ljava/lang/String;)Z
  */
