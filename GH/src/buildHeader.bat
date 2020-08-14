@@ -1,2 +1,2 @@
 @echo off
-javac -h ./header ./ghTools/GH.java
+javac -h ./header -d ../bin ./ghTools/GH.java

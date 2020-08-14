@@ -139,26 +139,36 @@ JNIEXPORT jbyteArray JNICALL Java_ghTools_GH_readMemory(JNIEnv* env, jclass, jlo
 
 JNIEXPORT jboolean JNICALL Java_ghTools_GH_writeMemory(JNIEnv* env, jclass, jlong address, jbyteArray bytesToWrite) {
     SIZE_T written;
-    SIZE_T len = env->GetArrayLength(bytesToWrite);
+    SIZE_T len{ env->GetArrayLength(bytesToWrite) };
     WriteProcessMemory(gameHandle, (LPVOID) address, env->GetByteArrayElements(bytesToWrite, NULL), len,  &written);
     return (written == len) ? true : false;
 }
 
 JNIEXPORT jboolean JNICALL Java_ghTools_GH_patchMemory(JNIEnv* env, jclass, jlong address, jbyteArray bytesToWrite) {
-    PatchExternal(gameHandle, (BYTE*) address, (BYTE*) env->GetByteArrayElements(bytesToWrite, NULL), env->GetArrayLength(bytesToWrite));
-    return true;
+    SIZE_T written;
+    DWORD oldprotect;
+    SIZE_T len{ env->GetArrayLength(bytesToWrite) };
+    VirtualProtectEx(gameHandle, (LPVOID) address, len, PAGE_EXECUTE_READWRITE, &oldprotect);
+    WriteProcessMemory(gameHandle, (LPVOID) address, env->GetByteArrayElements(bytesToWrite, NULL), len, &written);
+    VirtualProtectEx(gameHandle, (LPVOID) address, len, oldprotect, &oldprotect);
+    return (written == len) ? true : false;
 }
 
-JNIEXPORT jboolean JNICALL Java_ghTools_GH_nopMemory(JNIEnv*, jclass, jlong, jint) {
-
+JNIEXPORT jboolean JNICALL Java_ghTools_GH_nopMemory(JNIEnv*, jclass, jlong address, jint length) {
+    jint written;
+    DWORD oldprotect;
+    char* nopBytes{ (char*)_malloca(length) };
+    memset(nopBytes, 0x90, length);
+    VirtualProtectEx(gameHandle, (LPVOID)address, length, PAGE_EXECUTE_READWRITE, &oldprotect);
+    WriteProcessMemory(gameHandle, (LPVOID)address, nopBytes, length, (SIZE_T*)&written);
+    VirtualProtectEx(gameHandle, (LPVOID)address, length, oldprotect, &oldprotect);
+    _freea(nopBytes);
+    return (written == length) ? true : false;
 }
 
-JNIEXPORT jlong JNICALL Java_ghTools_GH_getObjectAddress(JNIEnv*, jclass, jobject) {
+JNIEXPORT jlong JNICALL Java_ghTools_GH_getObjectAddress(JNIEnv* env, jclass, jobject ghPointer) {
 
-}
-
-JNIEXPORT void JNICALL Java_ghTools_GH_close(JNIEnv*, jclass) {
-
+    return FindDynamicAddress(gameHandle, address, offsets);
 }
 
 JNIEXPORT jint JNICALL Java_ghTools_GH_getGamePID(JNIEnv*, jclass) {
