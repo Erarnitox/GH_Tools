@@ -18,9 +18,15 @@
     <ClInclude Include="src\header\ghTools_GH.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\header\external.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ghTools\native.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ghTools\external.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

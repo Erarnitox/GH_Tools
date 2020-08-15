@@ -1,0 +1,8 @@
+﻿  external.cpp
+  native.cpp
+C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(28,23): warning C4244: '=': conversion from 'jint' to 'WORD', possible loss of data
+C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(38,23): warning C4244: '=': conversion from 'jint' to 'WORD', possible loss of data
+C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(45,23): warning C4244: '=': conversion from 'jint' to 'WORD', possible loss of data
+C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(142,51): error C2397: conversion from 'jsize' to 'SIZE_T' requires a narrowing conversion
+C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(150,51): error C2397: conversion from 'jsize' to 'SIZE_T' requires a narrowing conversion
+C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(179,43): warning C4244: 'argument': conversion from 'jlong' to 'uintptr_t', possible loss of data

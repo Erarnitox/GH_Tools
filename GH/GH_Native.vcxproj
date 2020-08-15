@@ -163,9 +163,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\header\external.h" />
     <ClInclude Include="src\header\ghTools_GH.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\ghTools\external.cpp" />
     <ClCompile Include="src\ghTools\native.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

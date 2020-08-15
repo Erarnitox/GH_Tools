@@ -1,21 +1,2 @@
 ﻿  native.cpp
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(9): error C4716: 'Java_ghTools_GH_getKeyPress': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(5): error C4716: 'Java_ghTools_GH_getKeyDown': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(14): error C4716: 'Java_ghTools_GH_getKeyPressed': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(34): error C4716: 'Java_ghTools_GH_getCursorPos': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(38): error C4716: 'Java_ghTools_GH_openWindowName': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(50): error C4716: 'Java_ghTools_GH_getModuleBaseAddress__': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(46): error C4716: 'Java_ghTools_GH_isConnected': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(54): error C4716: 'Java_ghTools_GH_getModuleBaseAddress__Ljava_lang_String_2': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(58): error C4716: 'Java_ghTools_GH_readMemory': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(62): error C4716: 'Java_ghTools_GH_writeMemory': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(66): error C4716: 'Java_ghTools_GH_patchMemory': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(42): error C4716: 'Java_ghTools_GH_openProcess': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(70): error C4716: 'Java_ghTools_GH_nopMemory': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(74): error C4716: 'Java_ghTools_GH_getObjectAddress': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(82): error C4716: 'Java_ghTools_GH_getGamePID': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(86): error C4716: 'Java_ghTools_GH_isGameVisible': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(94): error C4716: 'Java_ghTools_GH_getGameWidth': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(90): error C4716: 'Java_ghTools_GH_getGameHeight': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(98): error C4716: 'Java_ghTools_GH_getGameXPos': must return a value
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(102): error C4716: 'Java_ghTools_GH_getGameYPos': must return a value
+  GH_Native.vcxproj -> C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.dll
