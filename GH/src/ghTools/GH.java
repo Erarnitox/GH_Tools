@@ -63,10 +63,10 @@ public class GH {
   	  public static native void rightClick();
   	  
 	  //open handle to process of a window:
-	  private static native boolean openWindowName(String procName);
+	  public static native boolean openWindowName(String procName);
 	  
 	  //open handle to a process:
-      private static native boolean openProcess(String procName);
+      public static native boolean openProcess(String procName);
       
       public static native boolean isConnected(); //is the game still running are we connected
       
