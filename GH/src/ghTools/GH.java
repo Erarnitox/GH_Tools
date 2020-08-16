@@ -11,9 +11,9 @@ public class GH {
 	
 	 static {
 	     try {
-	         System.loadLibrary("GH_Tools"); 
+	         System.loadLibrary("GH_Native"); 
 	    }catch (UnsatisfiedLinkError e) {
-	        System.load("/natives/GH_Tools.dll");
+	       System.load("/bin/GH_Native.dll");
 	    }
 	  }
 	
