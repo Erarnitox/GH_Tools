@@ -8,6 +8,29 @@ HANDLE gameHandle{ NULL };
 uintptr_t gameBase{ 0 };
 DWORD procId{ 0 };
 
+struct HandleData {
+    DWORD pid;
+    HWND hWnd;
+};
+
+BOOL CALLBACK EnumWindowsCallback(HWND hWnd, LPARAM lParam) {
+    HandleData& data = *(HandleData*)lParam;
+    DWORD pid = 0;
+    GetWindowThreadProcessId(hWnd, &pid);
+    if (pid == data.pid && GetWindow(hWnd, GW_OWNER) == HWND(0) && IsWindowVisible(hWnd)) {
+        data.hWnd = hWnd;
+        return FALSE;
+    }
+    return TRUE;
+}
+
+HWND FindMainWindow(DWORD dwPID) {
+    HandleData handleData{ 0 };
+    handleData.pid = dwPID;
+    EnumWindows(EnumWindowsCallback, (LPARAM)&handleData);
+    return handleData.hWnd;
+}
+
 JNIEXPORT jboolean JNICALL Java_ghTools_GH_getKeyDown(JNIEnv*, jclass, jint key) {
     return static_cast<bool>(GetAsyncKeyState(key));
 }
@@ -109,7 +132,7 @@ JNIEXPORT jboolean JNICALL Java_ghTools_GH_openProcess(JNIEnv* env, jclass, jstr
     procId = GetProcId(winName);
     gameBase = GetModuleBaseAddress(procId, NULL);
     gameHandle = OpenProcess(PROCESS_ALL_ACCESS, NULL, procId);
-    //gameWindow = 
+    gameWindow = FindMainWindow(procId);
 
     if (gameHandle) return true;
     else return false;

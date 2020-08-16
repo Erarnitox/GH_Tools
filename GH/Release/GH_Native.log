@@ -1,8 +1,8 @@
 ﻿  external.cpp
   native.cpp
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(28,23): warning C4244: '=': conversion from 'jint' to 'WORD', possible loss of data
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(38,23): warning C4244: '=': conversion from 'jint' to 'WORD', possible loss of data
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(45,23): warning C4244: '=': conversion from 'jint' to 'WORD', possible loss of data
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(142,51): error C2397: conversion from 'jsize' to 'SIZE_T' requires a narrowing conversion
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(150,51): error C2397: conversion from 'jsize' to 'SIZE_T' requires a narrowing conversion
-C:\Users\Erarnitox\git\GHTools_Local\GH\src\ghTools\native.cpp(179,43): warning C4244: 'argument': conversion from 'jlong' to 'uintptr_t', possible loss of data
+     Creating library C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.lib and object C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 105 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  GH_Native.vcxproj -> C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.dll
