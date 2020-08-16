@@ -1,12 +1,5 @@
 # GH_Tools
 #### Game Hacking Tools for Java
-`GH_Tools` is a wrapper around [**JNA**](https://github.com/java-native-access) makes it easier to use and provides some new functionality for game hacking as well.
-
-### Installing
-
-- To use `GH_Tools` you can either download it from [**here**](https://github.com/Erarnitox/java-sauerbraten-hack/raw/master/bin/GHTools.jar) and import in in your project.
-
-- Or get the source (Eclipse project) for it [**here**](https://github.com/Erarnitox/GH_Tools/GH_Tools).
 
 ### Usage
 #### Geting started
