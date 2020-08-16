@@ -185,14 +185,6 @@ JNIEXPORT jlong JNICALL Java_ghTools_GH_getObjectAddress
 
 /*
  * Class:     ghTools_GH
- * Method:    close
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_ghTools_GH_close
-  (JNIEnv *, jclass);
-
-/*
- * Class:     ghTools_GH
  * Method:    getGamePID
  * Signature: ()I
  */

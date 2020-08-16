@@ -9,8 +9,12 @@ import java.nio.ByteOrder;
 
 public class GH {
 	
-	  static{
-	      System.loadLibrary("GHTools"); //load our native code
+	 static {
+	     try {
+	         System.loadLibrary("GH_Tools"); 
+	    }catch (UnsatisfiedLinkError e) {
+	        System.load("/natives/GH_Tools.dll");
+	    }
 	  }
 	
 	  public static class Pointer {
@@ -270,9 +274,7 @@ public class GH {
       
       //get the dynamic Object address from its static Pointer
       public static native long getObjectAddress(GH.Pointer staticMultiLevelPointer);
-      
-      public static native void close();//close handle to process
-      
+       
     //normal sleep with error handeling
   	public static boolean sleep(int time){
   		try {

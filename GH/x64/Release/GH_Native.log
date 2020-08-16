@@ -1,0 +1,9 @@
+﻿  external.cpp
+  native.cpp
+     Creating library C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.lib and object C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.exp
+  Generating code
+  105 of 105 functions (100.0%) were compiled.
+    103 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  GH_Native.vcxproj -> C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.dll
