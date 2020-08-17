@@ -1,0 +1,8 @@
+﻿  external.cpp
+  native.cpp
+     Creating library C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.lib and object C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 105 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  GH_Native.vcxproj -> C:\Users\Erarnitox\git\GHTools_Local\GH\bin\GH_Native.dll
